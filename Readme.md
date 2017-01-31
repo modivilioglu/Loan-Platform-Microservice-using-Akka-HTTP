@@ -51,23 +51,26 @@ sh> sbt run
 The microservice is up and running on localhost:8080 and via curl commands, you will be
 able to
 - Create loan requests
+```
 curl -X POST -H "Accept: text/plain" -H "Content-Type: application/json" -H "Cache-Control: no-cache" -d '{
 	"identifier": "NONE",
 	"amount": 1000,
 	"durationInDays": 100
 }' "http://localhost:8080/request"
-
+```
 - Create loan offers for request
+```
 curl -X POST -H "Accept: text/plain" -H "Content-Type: application/json" -H "Cache-Control: no-cache" -d '{
 	"identifier": "2",
 	"requestID": "1485825123198",
 	"amount": 400,
 	"interest": 0.02
 }' "http://localhost:8080/offer"
-
+```
 - Get current loan per offers made for that specific request
+```
 curl -X GET -H "Content-Type: application/json" -H "Cache-Control: no-cache"  "http://localhost:8080/request/1485819097636"
-
+```
 ## Tests
 
 There are test cases for business layer CreditApi, dao layer InMemoryDao, as well as Microservice layer HttpCreditApiServer. You can run them using the following command
