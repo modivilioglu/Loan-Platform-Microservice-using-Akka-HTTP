@@ -42,11 +42,12 @@ val jsonFormat = Request(NON_USED_IDENTIFIER, 1000, 100).toJson
 sh> git clone https://github.com/modivilioglu/loan-platform-microservice-using-Akka-HTTP.git
 sh> cd loan-platform-microservice-using-Akka-HTTP
 sh> sbt run
-
+```
 ## Usage
 To start up the microservice simply type
+```
 sh> sbt run
-
+```
 The microservice is up and running on localhost:8080 and via curl commands, you will be
 able to
 - Create loan requests
